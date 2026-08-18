@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nathan Games</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
+</head>
+
+<body>
+
+  <div id="menu">
+    <h1>🎮 Nathan Games</h1>
+    <button onclick="startGame()">Play</button>
+    <p>High Score: <span id="highScore">0</span></p>
+  </div>
+
+  <div id="game" style="display:none;">
+    <p id="score">Score: 0 | Combo: 0 | Level: 1</p>
+  </div>
+
+  <div id="gameOver" style="display:none;">
+    <h2>Game Over</h2>
+    <p id="finalScore"></p>
+    <button onclick="startGame()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
