@@ -78,6 +78,7 @@ function moveTarget() {
     const padding = 40;
 
     const size = Math.max(45, 100 - (level - 1) * 10);
+    target.style.transition = `all ${Math.max(0.1, 0.4 - level * 0.05)}s`;
 
     target.style.width = `${size}px`;
     target.style.height = `${size}px`;
