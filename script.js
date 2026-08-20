@@ -74,12 +74,16 @@ function scorePoint() {
     void target.offsetWidth;
     target.classList.add("hit");
 }
-
 function moveTarget() {
     const padding = 40;
 
-    const maxX = window.innerWidth - target.offsetWidth - padding;
-    const maxY = window.innerHeight - target.offsetHeight - padding;
+    const size = Math.max(45, 100 - (level - 1) * 10);
+
+    target.style.width = `${size}px`;
+    target.style.height = `${size}px`;
+
+    const maxX = window.innerWidth - size - padding;
+    const maxY = window.innerHeight - size - padding;
 
     const x = Math.max(padding, Math.random() * maxX);
     const y = Math.max(120, Math.random() * maxY);
